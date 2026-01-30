@@ -37,7 +37,7 @@ function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Services</a>
+            <a href="/services" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Services</a>
             <a href="#why-us" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Why Us</a>
             <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Our Promise</a>
             <a href="#guarantee" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Guarantee</a>
@@ -65,7 +65,7 @@ function Navigation() {
         {mobileMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-4">
-              <a href="#services" className="text-gray-700 hover:text-blue-800 font-medium">Services</a>
+              <a href="/services" className="text-gray-700 hover:text-blue-800 font-medium">Services</a>
               <a href="#why-us" className="text-gray-700 hover:text-blue-800 font-medium">Why Us</a>
               <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium">Our Promise</a>
               <a href="#guarantee" className="text-gray-700 hover:text-blue-800 font-medium">Guarantee</a>
@@ -99,12 +99,12 @@ function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
-            Never Clean Your Gutters
+            Never Pay for Gutter Cleaning
             <span className="block text-amber-300">Again. Guaranteed.</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Prescott&apos;s premier gutter guard installation protects your home from clogs, water damage, and costly repairs — <strong className="text-white">backed by our lifetime warranty</strong>.
+            Prescott&apos;s professional gutter guard installation protects your home from clogs, water damage, and costly repairs — <strong className="text-white">backed by our lifetime warranty</strong>.
           </p>
 
           {/* CTA Buttons */}
@@ -700,7 +700,7 @@ function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+              <li><a href="/services" className="hover:text-white transition-colors">Services</a></li>
               <li><a href="#why-us" className="hover:text-white transition-colors">Why Choose Us</a></li>
               <li><a href="#testimonials" className="hover:text-white transition-colors">Our Promise</a></li>
               <li><a href="#guarantee" className="hover:text-white transition-colors">Our Guarantee</a></li>
