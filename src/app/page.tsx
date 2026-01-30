@@ -1,6 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import {
+  Phone,
+  Menu,
+  X,
+  Check,
+  Star,
+  Ladder,
+  DollarSign,
+  Bug,
+  ShieldCheck,
+  Zap,
+  PiggyBank,
+  Home,
+  Sun,
+  Clock,
+  MapPin,
+  Lock,
+  ChevronDown,
+} from "lucide-react";
 
 // Navigation Component
 function Navigation() {
@@ -33,13 +52,11 @@ function Navigation() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-700 hover:text-blue-800 p-2"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -63,6 +80,17 @@ function Navigation() {
   );
 }
 
+// Star Rating Component
+function StarRating({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex ${className}`}>
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} className="w-5 h-5 fill-current" />
+      ))}
+    </div>
+  );
+}
+
 // Hero Section
 function Hero() {
   return (
@@ -77,7 +105,7 @@ function Hero() {
         <div className="text-center">
           {/* Trust Badge */}
           <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-            <span className="text-amber-300 mr-2">★★★★★</span>
+            <StarRating className="text-amber-300 mr-2" />
             <span className="text-white text-sm font-medium">Rated #1 in Prescott | 500+ Happy Customers</span>
           </div>
 
@@ -100,36 +128,28 @@ function Hero() {
             </a>
             <a
               href="tel:+19285551234"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all inline-flex items-center gap-2"
             >
-              📞 (928) 555-1234
+              <Phone className="w-5 h-5" /> (928) 555-1234
             </a>
           </div>
 
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center gap-8 text-white/90">
             <div className="flex items-center">
-              <svg className="w-6 h-6 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
+              <Check className="w-6 h-6 text-green-400 mr-2" />
               <span>Free Estimates</span>
             </div>
             <div className="flex items-center">
-              <svg className="w-6 h-6 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
+              <Check className="w-6 h-6 text-green-400 mr-2" />
               <span>Lifetime Warranty</span>
             </div>
             <div className="flex items-center">
-              <svg className="w-6 h-6 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
+              <Check className="w-6 h-6 text-green-400 mr-2" />
               <span>Licensed & Insured</span>
             </div>
             <div className="flex items-center">
-              <svg className="w-6 h-6 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
+              <Check className="w-6 h-6 text-green-400 mr-2" />
               <span>Same-Week Install</span>
             </div>
           </div>
@@ -141,6 +161,24 @@ function Hero() {
 
 // Problem/Agitation Section
 function ProblemSection() {
+  const problems = [
+    {
+      icon: <Ladder className="w-12 h-12" />,
+      title: "Dangerous Ladder Climbing",
+      description: "Every year, 500,000+ Americans are injured falling from ladders. Why risk it?",
+    },
+    {
+      icon: <DollarSign className="w-12 h-12" />,
+      title: "Expensive Water Damage",
+      description: "Clogged gutters cause foundation cracks, basement flooding, and roof damage — costing $5,000+ to repair.",
+    },
+    {
+      icon: <Bug className="w-12 h-12" />,
+      title: "Pest Infestations",
+      description: "Standing water attracts mosquitoes, and debris-filled gutters become homes for rodents and insects.",
+    },
+  ];
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,25 +192,9 @@ function ProblemSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: "🪜",
-              title: "Dangerous Ladder Climbing",
-              description: "Every year, 500,000+ Americans are injured falling from ladders. Why risk it?",
-            },
-            {
-              icon: "💸",
-              title: "Expensive Water Damage",
-              description: "Clogged gutters cause foundation cracks, basement flooding, and roof damage — costing $5,000+ to repair.",
-            },
-            {
-              icon: "🐀",
-              title: "Pest Infestations",
-              description: "Standing water attracts mosquitoes, and debris-filled gutters become homes for rodents and insects.",
-            },
-          ].map((problem, index) => (
+          {problems.map((problem, index) => (
             <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-red-100 hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4">{problem.icon}</div>
+              <div className="text-red-500 mb-4">{problem.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{problem.title}</h3>
               <p className="text-gray-600">{problem.description}</p>
             </div>
@@ -187,56 +209,32 @@ function ProblemSection() {
 function ServicesSection() {
   const benefits = [
     {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
+      icon: <ShieldCheck className="w-12 h-12" />,
       title: "Lifetime Clog-Free Guarantee",
       description: "Our micro-mesh technology blocks 100% of debris while allowing maximum water flow. If it ever clogs, we'll fix it FREE.",
     },
     {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
+      icon: <Zap className="w-12 h-12" />,
       title: "Professional Installation",
       description: "Our certified technicians install your guards perfectly the first time. No drilling, no damage to your existing gutters.",
     },
     {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      icon: <PiggyBank className="w-12 h-12" />,
       title: "Saves You Money",
       description: "No more hiring cleaners twice a year. Our guards pay for themselves in just 3-4 years — then it's pure savings.",
     },
     {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-      ),
+      icon: <Home className="w-12 h-12" />,
       title: "Protects Your Home Value",
       description: "Prevent water damage, foundation issues, and landscaping erosion. Your home stays beautiful and structurally sound.",
     },
     {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-      ),
+      icon: <Sun className="w-12 h-12" />,
       title: "Arizona-Tough Materials",
       description: "Built to withstand Prescott's monsoons, intense sun, and pine needle storms. Aluminum construction won't rust or sag.",
     },
     {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      icon: <Clock className="w-12 h-12" />,
       title: "Fast Installation",
       description: "Most homes completed in just one day. We respect your time and property — we'll leave your yard cleaner than we found it.",
     },
@@ -324,9 +322,7 @@ function WhyUsSection() {
               ].map((item, index) => (
                 <div key={index} className="flex items-center">
                   <div className="bg-green-500 rounded-full p-1 mr-4">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
+                    <Check className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-lg text-gray-700">{item}</span>
                 </div>
@@ -337,7 +333,7 @@ function WhyUsSection() {
           <div className="bg-white p-8 rounded-3xl shadow-2xl">
             <div className="text-center mb-6">
               <div className="inline-flex items-center bg-amber-100 text-amber-800 rounded-full px-4 py-2 text-sm font-semibold mb-4">
-                ⭐ Limited Time Offer
+                <Star className="w-4 h-4 fill-current mr-1" /> Limited Time Offer
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Get 15% OFF Your Installation</h3>
               <p className="text-gray-600 mt-2">Plus FREE gutter cleaning (a $199 value)</p>
@@ -421,7 +417,7 @@ function TestimonialsSection() {
             What Your Neighbors Are Saying
           </h2>
           <div className="flex justify-center items-center gap-2 mt-4">
-            <div className="text-amber-400 text-2xl">★★★★★</div>
+            <StarRating className="text-amber-400" />
             <span className="text-gray-600 text-lg">4.9/5 from 200+ reviews</span>
           </div>
         </div>
@@ -432,7 +428,7 @@ function TestimonialsSection() {
               key={index}
               className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow"
             >
-              <div className="text-amber-400 mb-4">★★★★★</div>
+              <StarRating className="text-amber-400 mb-4" />
               <p className="text-gray-700 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
               <div className="flex items-center">
                 <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -452,7 +448,7 @@ function TestimonialsSection() {
           <p className="text-center text-gray-500 mb-8">Trusted & Verified By</p>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
             <div className="text-2xl font-bold text-gray-400">BBB A+ Rating</div>
-            <div className="text-2xl font-bold text-gray-400">Google ★★★★★</div>
+            <div className="text-2xl font-bold text-gray-400 flex items-center gap-1">Google <StarRating className="text-gray-400 scale-75" /></div>
             <div className="text-2xl font-bold text-gray-400">HomeAdvisor</div>
             <div className="text-2xl font-bold text-gray-400">Angi</div>
           </div>
@@ -470,9 +466,7 @@ function GuaranteeSection() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block mb-8">
             <div className="bg-amber-500 text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
+              <ShieldCheck className="w-12 h-12" />
             </div>
           </div>
 
@@ -528,9 +522,7 @@ function ContactSection() {
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
                 <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
+                  <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 text-lg">Call Us Directly</h4>
@@ -543,10 +535,7 @@ function ContactSection() {
 
               <div className="flex items-start">
                 <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+                  <MapPin className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 text-lg">Service Area</h4>
@@ -631,8 +620,8 @@ function ContactSection() {
                 Get My FREE Estimate →
               </button>
 
-              <p className="text-center text-sm text-gray-500">
-                🔒 Your information is secure and will never be shared.
+              <p className="text-center text-sm text-gray-500 flex items-center justify-center gap-1">
+                <Lock className="w-4 h-4" /> Your information is secure and will never be shared.
               </p>
             </form>
           </div>
@@ -682,9 +671,7 @@ function FAQSection() {
             <details key={index} className="group bg-gray-50 rounded-2xl">
               <summary className="flex justify-between items-center cursor-pointer p-6 font-bold text-lg text-gray-900 list-none">
                 {faq.question}
-                <svg className="w-6 h-6 text-blue-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                <ChevronDown className="w-6 h-6 text-blue-600 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="px-6 pb-6 text-gray-600">
                 {faq.answer}
@@ -717,9 +704,9 @@ function FinalCTA() {
           </a>
           <a
             href="tel:+19285551234"
-            className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all"
+            className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all inline-flex items-center justify-center gap-2"
           >
-            📞 (928) 555-1234
+            <Phone className="w-5 h-5" /> (928) 555-1234
           </a>
         </div>
       </div>
