@@ -6,19 +6,19 @@ import {
   Menu,
   X,
   Check,
-  Star,
-  Ladder,
+  AlertTriangle,
   DollarSign,
   Bug,
   ShieldCheck,
   Zap,
   PiggyBank,
-  Home,
+  Home as HomeIcon,
   Sun,
   Clock,
   MapPin,
   Lock,
   ChevronDown,
+  Star,
 } from "lucide-react";
 
 // Navigation Component
@@ -39,7 +39,7 @@ function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Services</a>
             <a href="#why-us" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Why Us</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Reviews</a>
+            <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Our Promise</a>
             <a href="#guarantee" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Guarantee</a>
             <a href="tel:+19285551234" className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg">
               (928) 555-1234
@@ -67,7 +67,7 @@ function Navigation() {
             <div className="flex flex-col space-y-4">
               <a href="#services" className="text-gray-700 hover:text-blue-800 font-medium">Services</a>
               <a href="#why-us" className="text-gray-700 hover:text-blue-800 font-medium">Why Us</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium">Reviews</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium">Our Promise</a>
               <a href="#guarantee" className="text-gray-700 hover:text-blue-800 font-medium">Guarantee</a>
               <a href="tel:+19285551234" className="bg-amber-500 text-white px-6 py-3 rounded-full font-bold text-center">
                 (928) 555-1234
@@ -77,17 +77,6 @@ function Navigation() {
         )}
       </div>
     </nav>
-  );
-}
-
-// Star Rating Component
-function StarRating({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex ${className}`}>
-      {[...Array(5)].map((_, i) => (
-        <Star key={i} className="w-5 h-5 fill-current" />
-      ))}
-    </div>
   );
 }
 
@@ -105,8 +94,8 @@ function Hero() {
         <div className="text-center">
           {/* Trust Badge */}
           <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-            <StarRating className="text-amber-300 mr-2" />
-            <span className="text-white text-sm font-medium">Rated #1 in Prescott | 500+ Happy Customers</span>
+            <ShieldCheck className="w-5 h-5 text-amber-300 mr-2" />
+            <span className="text-white text-sm font-medium">Locally Owned & Operated | Licensed & Insured</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
@@ -163,7 +152,7 @@ function Hero() {
 function ProblemSection() {
   const problems = [
     {
-      icon: <Ladder className="w-12 h-12" />,
+      icon: <AlertTriangle className="w-12 h-12" />,
       title: "Dangerous Ladder Climbing",
       description: "Every year, 500,000+ Americans are injured falling from ladders. Why risk it?",
     },
@@ -224,7 +213,7 @@ function ServicesSection() {
       description: "No more hiring cleaners twice a year. Our guards pay for themselves in just 3-4 years — then it's pure savings.",
     },
     {
-      icon: <Home className="w-12 h-12" />,
+      icon: <HomeIcon className="w-12 h-12" />,
       title: "Protects Your Home Value",
       description: "Prevent water damage, foundation issues, and landscaping erosion. Your home stays beautiful and structurally sound.",
     },
@@ -272,13 +261,13 @@ function ServicesSection() {
   );
 }
 
-// Social Proof Stats
+// Promise Stats Section
 function StatsSection() {
   const stats = [
-    { number: "500+", label: "Happy Customers" },
-    { number: "15+", label: "Years Experience" },
-    { number: "100%", label: "Satisfaction Rate" },
-    { number: "0", label: "Clogged Gutters" },
+    { number: "Lifetime", label: "Clog-Free Warranty" },
+    { number: "100%", label: "Satisfaction Guarantee" },
+    { number: "Free", label: "Estimates & Inspections" },
+    { number: "1 Day", label: "Most Installations" },
   ];
 
   return (
@@ -304,12 +293,12 @@ function WhyUsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-blue-600 font-semibold text-lg">Local & Trusted</span>
+            <span className="text-blue-600 font-semibold text-lg">Local & Committed</span>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">
-              Prescott&apos;s Gutter Guard Experts Since 2009
+              Your Neighbors in Gutter Protection
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              We&apos;re not a big-box franchise. We&apos;re a local family business that takes pride in protecting our community&apos;s homes. When you call, you&apos;ll talk to a real person who lives right here in Prescott.
+              We&apos;re not a big-box franchise. We&apos;re a local Prescott business committed to doing right by our neighbors. When you call, you&apos;ll talk to a real person who lives right here in the community.
             </p>
 
             <div className="space-y-6">
@@ -367,44 +356,38 @@ function WhyUsSection() {
   );
 }
 
-// Testimonials Section
-function TestimonialsSection() {
-  const testimonials = [
+// Our Promise Section
+function PromiseSection() {
+  const promises = [
     {
-      name: "Robert M.",
-      location: "Prescott Valley",
-      text: "Best investment we've made for our home. The monsoon season used to flood our flower beds from overflowing gutters. Not anymore! These guys are the real deal.",
-      rating: 5,
+      icon: <Clock className="w-8 h-8" />,
+      title: "We Show Up On Time",
+      description: "We respect your schedule. If we say we'll be there at 9am, we'll be there at 9am. No vague 4-hour windows.",
     },
     {
-      name: "Sarah & Tom K.",
-      location: "Prescott",
-      text: "Finally, no more climbing ladders twice a year! The installation crew was professional, on time, and cleaned up everything. Highly recommend to all our neighbors.",
-      rating: 5,
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "Honest, Upfront Pricing",
+      description: "The price we quote is the price you pay. No hidden fees, no surprise charges, no bait-and-switch tactics.",
     },
     {
-      name: "Patricia L.",
-      location: "Chino Valley",
-      text: "I got quotes from 3 companies. Prescott Gutter Guards was the most honest and fairly priced. Two years later, still no clogs. Worth every penny.",
-      rating: 5,
+      icon: <ShieldCheck className="w-8 h-8" />,
+      title: "We Stand Behind Our Work",
+      description: "If something isn't right, we'll make it right — no questions asked. Your satisfaction is our reputation.",
     },
     {
-      name: "Mike D.",
-      location: "Dewey-Humboldt",
-      text: "The pine needles from our trees used to destroy our gutters. These guards handle everything — needles, leaves, even the heavy monsoon rains drain perfectly.",
-      rating: 5,
+      icon: <HomeIcon className="w-8 h-8" />,
+      title: "We Treat Your Home Like Ours",
+      description: "Drop cloths down, shoes off if you prefer, and we clean up completely. You won't know we were there (except for the new gutter guards).",
     },
     {
-      name: "Jennifer H.",
-      location: "Prescott",
-      text: "As a single homeowner, I dreaded gutter maintenance. Now I don't even think about it. The lifetime warranty gave me total peace of mind.",
-      rating: 5,
+      icon: <Phone className="w-8 h-8" />,
+      title: "A Real Person Answers",
+      description: "Call us and you'll talk to a real human who can actually help — not a robot or endless phone tree.",
     },
     {
-      name: "Bill & Nancy R.",
-      location: "Prescott Lakes",
-      text: "We've lived here 20 years and tried everything. This is the first gutter guard system that actually works. Should have done this years ago!",
-      rating: 5,
+      icon: <Check className="w-8 h-8" />,
+      title: "No Pressure, Ever",
+      description: "We'll give you a quote, answer your questions, and let you decide. No pushy sales tactics or artificial urgency.",
     },
   ];
 
@@ -412,46 +395,26 @@ function TestimonialsSection() {
     <section id="testimonials" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-blue-600 font-semibold text-lg">Real Reviews</span>
+          <span className="text-blue-600 font-semibold text-lg">Our Commitment</span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
-            What Your Neighbors Are Saying
+            What We Promise You
           </h2>
-          <div className="flex justify-center items-center gap-2 mt-4">
-            <StarRating className="text-amber-400" />
-            <span className="text-gray-600 text-lg">4.9/5 from 200+ reviews</span>
-          </div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            We&apos;re building our reputation one job at a time. Here&apos;s what you can expect when you work with us.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {promises.map((promise, index) => (
             <div
               key={index}
               className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow"
             >
-              <StarRating className="text-amber-400 mb-4" />
-              <p className="text-gray-700 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
-              <div className="flex items-center">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <div className="font-bold text-gray-900">{testimonial.name}</div>
-                  <div className="text-gray-500 text-sm">{testimonial.location}</div>
-                </div>
-              </div>
+              <div className="text-blue-600 mb-4">{promise.icon}</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{promise.title}</h3>
+              <p className="text-gray-600">{promise.description}</p>
             </div>
           ))}
-        </div>
-
-        {/* Trust Badges */}
-        <div className="mt-16 pt-12 border-t border-gray-200">
-          <p className="text-center text-gray-500 mb-8">Trusted & Verified By</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
-            <div className="text-2xl font-bold text-gray-400">BBB A+ Rating</div>
-            <div className="text-2xl font-bold text-gray-400 flex items-center gap-1">Google <StarRating className="text-gray-400 scale-75" /></div>
-            <div className="text-2xl font-bold text-gray-400">HomeAdvisor</div>
-            <div className="text-2xl font-bold text-gray-400">Angi</div>
-          </div>
         </div>
       </div>
     </section>
@@ -693,7 +656,7 @@ function FinalCTA() {
           Stop Worrying About Your Gutters
         </h2>
         <p className="text-xl text-blue-100 mb-8">
-          Join 500+ Prescott homeowners who never clean their gutters again.
+          Protect your home with gutter guards that actually work — backed by our lifetime warranty.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -725,7 +688,7 @@ function Footer() {
               <span className="text-amber-500">Prescott</span> Gutter Guards
             </div>
             <p className="mb-4">
-              Prescott&apos;s trusted gutter protection experts since 2009. Protecting homes from water damage with professional installation and lifetime warranties.
+              Your local Prescott gutter protection experts. Protecting homes from water damage with professional installation and lifetime warranties.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white transition-colors">Facebook</a>
@@ -739,7 +702,7 @@ function Footer() {
             <ul className="space-y-2">
               <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
               <li><a href="#why-us" className="hover:text-white transition-colors">Why Choose Us</a></li>
-              <li><a href="#testimonials" className="hover:text-white transition-colors">Reviews</a></li>
+              <li><a href="#testimonials" className="hover:text-white transition-colors">Our Promise</a></li>
               <li><a href="#guarantee" className="hover:text-white transition-colors">Our Guarantee</a></li>
               <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
@@ -786,7 +749,7 @@ export default function Home() {
       <ServicesSection />
       <StatsSection />
       <WhyUsSection />
-      <TestimonialsSection />
+      <PromiseSection />
       <GuaranteeSection />
       <ContactSection />
       <FAQSection />
