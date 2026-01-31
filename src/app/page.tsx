@@ -156,19 +156,19 @@ function Hero() {
 function ProblemSection() {
   const problems = [
     {
-      icon: <AlertTriangle className="w-12 h-12" />,
-      title: "Dangerous Ladder Climbing",
-      description: "Every year, 500,000+ Americans are injured falling from ladders. Why risk it?",
+      icon: <Clock className="w-12 h-12" />,
+      title: "Wasted Weekends",
+      description: "Nobody wants to spend their Saturday on a ladder scooping wet leaves out of gutters. You've got better things to do.",
     },
     {
       icon: <DollarSign className="w-12 h-12" />,
-      title: "Expensive Water Damage",
-      description: "Clogged gutters cause foundation cracks, basement flooding, and roof damage, costing $5,000+ to repair.",
+      title: "Costly Water Damage",
+      description: "Overflowing gutters don't just look bad—they rot fascia boards, crack foundations, and flood basements. Repairs run $5,000+.",
     },
     {
-      icon: <Bug className="w-12 h-12" />,
-      title: "Pest Infestations",
-      description: "Standing water attracts mosquitoes, and debris-filled gutters become homes for rodents and insects.",
+      icon: <AlertTriangle className="w-12 h-12" />,
+      title: "The Chore That Never Ends",
+      description: "Clean them in spring, clean them in fall, clean them after every storm. With Arizona's monsoons and pine needles, it's endless.",
     },
   ];
 
@@ -178,15 +178,15 @@ function ProblemSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Tired of These Gutter Nightmares?
+              Sick of Cleaning Your Gutters?
             </h2>
             <p className="text-xl text-gray-600">
-              Don&apos;t wait until it&apos;s too late. Clogged gutters cause thousands in damage every year.
+              You&apos;re not alone. It&apos;s the household chore everyone dreads—and the one that causes the most damage when ignored.
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="/clogged gutter.png"
+              src="/clogged-gutter.png"
               alt="Clogged gutter full of debris"
               className="w-full h-auto"
             />
@@ -195,8 +195,8 @@ function ProblemSection() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-red-100 hover:shadow-xl transition-shadow">
-              <div className="text-red-500 mb-4">{problem.icon}</div>
+            <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+              <div className="text-gray-700 mb-4">{problem.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{problem.title}</h3>
               <p className="text-gray-600">{problem.description}</p>
             </div>
