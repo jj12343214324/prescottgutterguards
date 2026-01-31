@@ -3,8 +3,7 @@ export interface Location {
   name: string;
   type: "city" | "neighborhood" | "community";
   parentCity?: string;
-  description: string;
-  challenges: string[];
+  why: string;
   zipCodes?: string[];
 }
 
@@ -14,56 +13,28 @@ export const locations: Location[] = [
     slug: "prescott",
     name: "Prescott",
     type: "city",
-    description:
-      "Heavy Ponderosa pine coverage plus monsoon rains. Older homes with original gutters that clog constantly.",
-    challenges: [
-      "Pine needles year-round",
-      "Intense monsoon downpours",
-      "Wildfire risk — WUI zone",
-      "Older homes with aging gutters",
-    ],
+    why: "Ponderosa pines drop needles year-round, and monsoon season dumps rain fast. Without guards, you're cleaning gutters constantly or paying someone else to.",
     zipCodes: ["86301", "86302", "86303", "86304", "86305"],
   },
   {
     slug: "prescott-valley",
     name: "Prescott Valley",
     type: "city",
-    description:
-      "High desert dust and debris. New construction often has undersized gutters. Flash flooding during monsoons.",
-    challenges: [
-      "Desert dust accumulation",
-      "Flash flood runoff",
-      "Builder-grade gutters undersized",
-      "Pine/juniper debris in foothills",
-    ],
+    why: "Desert dust builds up fast, and when monsoons hit, clogged gutters overflow and flood landscaping. New homes here often have undersized builder-grade gutters that clog even faster.",
     zipCodes: ["86314", "86315"],
   },
   {
     slug: "chino-valley",
     name: "Chino Valley",
     type: "city",
-    description:
-      "Open grassland means high winds carry dust, tumbleweeds, and debris directly into gutters.",
-    challenges: [
-      "High winds carry debris",
-      "Tumbleweeds and ag debris",
-      "Hail during monsoons",
-      "No tree cover = gutters catch everything",
-    ],
+    why: "Wind blows everything into your gutters: dust, tumbleweeds, debris from the open grassland. No trees to block it means your gutters catch it all.",
     zipCodes: ["86323"],
   },
   {
     slug: "dewey-humboldt",
     name: "Dewey-Humboldt",
     type: "city",
-    description:
-      "Mix of older and newer homes. Desert vegetation debris. Monsoon runoff from surrounding hills.",
-    challenges: [
-      "Older homes need gutter updates",
-      "Desert debris buildup",
-      "Hill runoff during storms",
-      "Mixed terrain drainage issues",
-    ],
+    why: "Mix of older and newer homes with desert vegetation dropping debris year round. Monsoon rains hit hard here and clogged gutters mean water goes where you don't want it.",
     zipCodes: ["86327", "86329"],
   },
   // Prescott Neighborhoods
@@ -72,14 +43,7 @@ export const locations: Location[] = [
     name: "Prescott Lakes",
     type: "neighborhood",
     parentCity: "Prescott",
-    description:
-      "Golf course community. Landscaping debris from course plus lake moisture increases gutter demands.",
-    challenges: [
-      "Golf course tree debris",
-      "Lake moisture = more gutter load",
-      "HOA requires clean appearance",
-      "Premium homes need premium protection",
-    ],
+    why: "Golf course trees and landscaping produce tons of debris. Premium homes here deserve protection that matches, and HOAs notice when gutters overflow.",
     zipCodes: ["86301"],
   },
   {
@@ -87,14 +51,7 @@ export const locations: Location[] = [
     name: "Thumb Butte",
     type: "neighborhood",
     parentCity: "Prescott",
-    description:
-      "Dense Ponderosa forest. Extreme pine needle accumulation. High fire risk zone.",
-    challenges: [
-      "Extreme pine needle buildup",
-      "WUI fire zone — need fire-rated guards",
-      "Steep terrain = fast water flow",
-      "Squirrels and birds add debris",
-    ],
+    why: "You're in the forest. Pine needles pile up fast, and this is a fire zone. Dry needles in gutters are a fire hazard. Our WUI-rated guards help protect your home.",
     zipCodes: ["86303"],
   },
   {
@@ -102,14 +59,7 @@ export const locations: Location[] = [
     name: "Williamson Valley",
     type: "neighborhood",
     parentCity: "Prescott",
-    description:
-      "Large rural lots. Dust from unpaved roads. Cottonwood and deciduous tree debris.",
-    challenges: [
-      "Road dust accumulation",
-      "Cottonwood fluff and leaves",
-      "Mix of home styles",
-      "Well water mineral concerns",
-    ],
+    why: "Large lots with cottonwoods and unpaved roads mean gutters fill with leaves and dust. Rural properties can't always get cleaners out quickly. Guards solve that.",
     zipCodes: ["86305"],
   },
   {
@@ -117,14 +67,7 @@ export const locations: Location[] = [
     name: "Groom Creek",
     type: "neighborhood",
     parentCity: "Prescott",
-    description:
-      "Higher elevation forest. Snow in winter, monsoons in summer. Pine needles and cones year-round.",
-    challenges: [
-      "Snow loads on gutters",
-      "Ice dam potential",
-      "Year-round pine debris",
-      "Steep rooflines",
-    ],
+    why: "Higher elevation means snow loads on gutters plus year-round pine debris. Ice dams form when gutters clog in winter. Guards keep water flowing.",
     zipCodes: ["86303"],
   },
   {
@@ -132,14 +75,7 @@ export const locations: Location[] = [
     name: "Downtown Prescott",
     type: "neighborhood",
     parentCity: "Prescott",
-    description:
-      "Historic homes with unique gutter profiles. Mature shade trees drop heavy leaf loads.",
-    challenges: [
-      "Historic gutters need special fit",
-      "Heavy deciduous leaf drop",
-      "Narrow lots complicate access",
-      "Preservation requirements",
-    ],
+    why: "Historic homes with mature trees everywhere. Big oaks and elms drop heavy leaf loads in fall. Older gutter systems need protection to keep working.",
     zipCodes: ["86301"],
   },
   {
@@ -147,14 +83,7 @@ export const locations: Location[] = [
     name: "Forest Trails",
     type: "neighborhood",
     parentCity: "Prescott",
-    description:
-      "Surrounded by Ponderosa pines. Significant needle debris. Fire mitigation area.",
-    challenges: [
-      "Heavy pine needle debris",
-      "Forest runoff during monsoons",
-      "Fire mitigation zone",
-      "HOA appearance standards",
-    ],
+    why: "Homes surrounded by pines. You already know the needle problem. Guards mean you stop climbing ladders every few months.",
     zipCodes: ["86303"],
   },
   // Prescott Valley Neighborhoods
@@ -163,14 +92,7 @@ export const locations: Location[] = [
     name: "Granville",
     type: "neighborhood",
     parentCity: "Prescott Valley",
-    description:
-      "Newer construction with undersized builder gutters. Desert landscaping produces fine debris.",
-    challenges: [
-      "Fine desert debris",
-      "New home gutters often too small",
-      "HOA strict on appearance",
-      "Monsoon flooding from hardscape",
-    ],
+    why: "Newer homes with small gutters that builders installed cheap. Desert grit clogs them fast. Guards now prevent problems later.",
     zipCodes: ["86314"],
   },
   {
@@ -178,14 +100,7 @@ export const locations: Location[] = [
     name: "StoneRidge",
     type: "neighborhood",
     parentCity: "Prescott Valley",
-    description:
-      "Golf course community with mature trees. Established landscaping means lots of debris.",
-    challenges: [
-      "Golf course tree debris",
-      "Mature landscaping",
-      "Varied gutter configurations",
-      "55+ residents want zero maintenance",
-    ],
+    why: "Golf course community with mature trees. Lots of retirees here who don't want to deal with ladder work. Guards are a no-brainer.",
     zipCodes: ["86314"],
   },
   {
@@ -193,14 +108,7 @@ export const locations: Location[] = [
     name: "Viewpoint",
     type: "neighborhood",
     parentCity: "Prescott Valley",
-    description:
-      "Elevated location. Wind-driven debris from open terrain. Intense sun exposure.",
-    challenges: [
-      "Wind drives debris into gutters",
-      "Sun degrades cheap guards fast",
-      "Sloped lots = fast runoff",
-      "Exposed to weather",
-    ],
+    why: "Elevated and exposed to wind. Debris blows in from everywhere. Sun also beats down on south-facing gutters, so cheap plastic guards fail fast here.",
     zipCodes: ["86315"],
   },
   {
@@ -208,14 +116,7 @@ export const locations: Location[] = [
     name: "Mingus West",
     type: "neighborhood",
     parentCity: "Prescott Valley",
-    description:
-      "Mix of older and newer homes. High desert dust. Budget-conscious area needs value options.",
-    challenges: [
-      "Older gutters deteriorating",
-      "Desert dust buildup",
-      "Drainage challenges in some areas",
-      "Need affordable solutions",
-    ],
+    why: "Mix of older homes that need gutter TLC. Desert dust is constant. Budget-friendly Raptor guards work great here.",
     zipCodes: ["86315"],
   },
   // Additional Communities
@@ -223,84 +124,42 @@ export const locations: Location[] = [
     slug: "paulden",
     name: "Paulden",
     type: "community",
-    description:
-      "Rural area north of Chino Valley. Dust and wind from open terrain. Mix of home types.",
-    challenges: [
-      "Remote location",
-      "Dust and wind exposure",
-      "Mix of manufactured and site-built",
-      "Well/septic properties",
-    ],
+    why: "Rural and windy. Dust storms send debris straight into gutters. Getting a cleaner out here is a hassle, so install guards once and forget it.",
     zipCodes: ["86334"],
   },
   {
     slug: "mayer",
     name: "Mayer",
     type: "community",
-    description:
-      "Historic mining town. Older housing stock. Highway dust near main road.",
-    challenges: [
-      "Older homes need updates",
-      "Highway dust",
-      "Limited local services",
-      "Varied terrain",
-    ],
+    why: "Older homes along the highway catch road dust and debris. Guards keep gutters clear so water drains right, not into your walls.",
     zipCodes: ["86333"],
   },
   {
     slug: "spring-valley",
     name: "Spring Valley",
     type: "community",
-    description:
-      "Rural area between Dewey-Humboldt and Mayer. Unpaved roads create dust. Monsoon drainage issues.",
-    challenges: [
-      "Unpaved road dust",
-      "Limited infrastructure",
-      "Monsoon drainage problems",
-      "Varied home conditions",
-    ],
+    why: "Unpaved roads kick up dust that settles in gutters. When monsoons hit, that dust turns to mud and clogs everything.",
     zipCodes: ["86333"],
   },
   {
     slug: "yarnell",
     name: "Yarnell",
     type: "community",
-    description:
-      "Mountain community. Extreme wildfire risk after 2013 fire. Pine and chaparral debris.",
-    challenges: [
-      "Extreme wildfire risk — WUI critical",
-      "Pine and chaparral debris",
-      "Remote location",
-      "Post-fire rebuilding area",
-    ],
+    why: "After the 2013 fire, everyone here knows fire risk is real. Dry debris in gutters is fuel. WUI-rated guards are essential, not optional.",
     zipCodes: ["85362"],
   },
   {
     slug: "wilhoit",
     name: "Wilhoit",
     type: "community",
-    description:
-      "Very rural, off-grid character. Extreme weather exposure. Self-reliant homeowners.",
-    challenges: [
-      "Remote access",
-      "Off-grid homes common",
-      "Extreme weather exposure",
-      "Limited nearby services",
-    ],
+    why: "Remote and exposed to weather. When your gutters clog out here, you're on your own. Guards mean one less thing to worry about.",
     zipCodes: ["86332"],
   },
   {
     slug: "walker",
     name: "Walker",
     type: "community",
-    description:
-      "Historic mining area in the forest. Heavy pine needle accumulation. Fire risk zone.",
-    challenges: [
-      "Heavy pine needle debris",
-      "Forest fire risk",
-      "Steep terrain",
-      "Older cabins and homes",
-    ],
+    why: "Forest living near Lynx Lake. Pine needles constantly. Fire risk. If you're in Walker, you need guards that block needles and resist fire.",
     zipCodes: ["86303"],
   },
   {
@@ -308,14 +167,7 @@ export const locations: Location[] = [
     name: "Pronghorn Ranch",
     type: "neighborhood",
     parentCity: "Prescott Valley",
-    description:
-      "New development. Construction dust during buildout. Builder-grade gutters may be undersized.",
-    challenges: [
-      "Construction dust",
-      "New landscaping establishing",
-      "Builder gutters undersized",
-      "Desert debris",
-    ],
+    why: "New development still being built. Construction dust everywhere right now. Get guards before your gutters fill with it.",
     zipCodes: ["86315"],
   },
   {
@@ -323,14 +175,7 @@ export const locations: Location[] = [
     name: "Talking Rock Ranch",
     type: "neighborhood",
     parentCity: "Prescott",
-    description:
-      "Luxury golf and ranch community. Large custom homes with extensive gutter runs. Premium expectations.",
-    challenges: [
-      "Premium homes need premium guards",
-      "Golf course and ranch debris",
-      "Large homes = lots of gutters",
-      "High appearance standards",
-    ],
+    why: "Custom homes with long gutter runs. Golf course and ranch debris. Premium property deserves premium protection, and LeafBlaster Pro is the move here.",
     zipCodes: ["86305"],
   },
 ];

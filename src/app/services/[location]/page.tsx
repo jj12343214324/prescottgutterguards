@@ -45,7 +45,7 @@ export async function generateMetadata({
   }
 
   const title = `Gutter Guards ${location.name} | Prescott Gutter Guards`;
-  const description = `Gutter guard installation in ${location.name}. ${location.description} Free estimates, lifetime warranty.`;
+  const description = `Gutter guard installation in ${location.name}. ${location.why} Free estimates, lifetime warranty.`;
 
   return {
     title,
@@ -98,13 +98,6 @@ function ProductCard({ product, recommended }: { product: Product; recommended: 
         <h3 className="text-xl font-bold text-white">{product.name}</h3>
       </div>
       <div className="p-6">
-        <div className={`text-2xl font-bold ${colors.text} mb-2`}>
-          {product.pricePerFoot}
-        </div>
-        <div className="text-sm text-gray-500 mb-4">
-          {product.typicalHome}: {product.priceRange}
-        </div>
-
         {/* Image Placeholder */}
         <div className={`${colors.bgLight} rounded-lg p-6 mb-4 text-center ${colors.border} border`}>
           <div className={`${colors.text} text-sm font-medium`}>[Product Image]</div>
@@ -146,13 +139,9 @@ export default async function LocationPage({
     location.type === "city" ? getNeighborhoodsByCity(location.slug) : [];
 
   // Determine recommended product based on location challenges
-  const hasFireRisk = location.challenges.some(
-    (c) =>
-      c.toLowerCase().includes("fire") || c.toLowerCase().includes("wildfire") || c.toLowerCase().includes("wui")
-  );
-  const hasPineNeedles = location.challenges.some(
-    (c) => c.toLowerCase().includes("pine") || c.toLowerCase().includes("needle")
-  );
+  const why = location.why.toLowerCase();
+  const hasFireRisk = why.includes("fire") || why.includes("wildfire") || why.includes("wui");
+  const hasPineNeedles = why.includes("pine") || why.includes("needle");
   const recommendedTier = hasFireRisk || hasPineNeedles ? "best" : "better";
 
   return (
@@ -172,7 +161,7 @@ export default async function LocationPage({
           </h1>
 
           <p className="text-lg text-blue-100 max-w-3xl mb-6">
-            {location.description}
+            {location.why}
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -183,16 +172,16 @@ export default async function LocationPage({
               Get Free Estimate
             </Link>
             <a
-              href="tel:+19285551234"
+              href="tel:+19289107578"
               className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-6 py-3 rounded-full font-bold transition-all inline-flex items-center gap-2"
             >
-              <Phone className="w-5 h-5" /> (928) 555-1234
+              <Phone className="w-5 h-5" /> (928) 910-7578
             </a>
           </div>
         </div>
       </section>
 
-      {/* Challenges */}
+      {/* Why Section */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -201,16 +190,9 @@ export default async function LocationPage({
                 <AlertTriangle className="w-6 h-6 text-amber-500" />
                 Why {location.name} Needs Gutter Guards
               </h2>
-              <ul className="space-y-3">
-                {location.challenges.map((challenge, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <div className="bg-amber-500 rounded-full p-1 mt-0.5 shrink-0">
-                      <AlertTriangle className="w-3 h-3 text-white" />
-                    </div>
-                    <span className="text-gray-700">{challenge}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {location.why}
+              </p>
             </div>
 
             {/* Image Placeholder */}
@@ -309,8 +291,8 @@ export default async function LocationPage({
                     {neighborhood.name}
                     <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {neighborhood.description}
+                  <p className="text-sm text-gray-600 mt-1 line-clamp-2">
+                    {neighborhood.why}
                   </p>
                 </Link>
               ))}
@@ -333,10 +315,10 @@ export default async function LocationPage({
               Request Estimate
             </Link>
             <a
-              href="tel:+19285551234"
+              href="tel:+19289107578"
               className="bg-amber-600 hover:bg-amber-700 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold transition-all inline-flex items-center justify-center gap-2"
             >
-              <Phone className="w-5 h-5" /> (928) 555-1234
+              <Phone className="w-5 h-5" /> (928) 910-7578
             </a>
           </div>
         </div>

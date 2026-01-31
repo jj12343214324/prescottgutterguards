@@ -41,8 +41,8 @@ function Navigation() {
             <a href="#why-us" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Why Us</a>
             <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Our Promise</a>
             <a href="#guarantee" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Guarantee</a>
-            <a href="tel:+19285551234" className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg">
-              (928) 555-1234
+            <a href="tel:+19289107578" className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg">
+              (928) 910-7578
             </a>
           </div>
 
@@ -69,8 +69,8 @@ function Navigation() {
               <a href="#why-us" className="text-gray-700 hover:text-blue-800 font-medium">Why Us</a>
               <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium">Our Promise</a>
               <a href="#guarantee" className="text-gray-700 hover:text-blue-800 font-medium">Guarantee</a>
-              <a href="tel:+19285551234" className="bg-amber-500 text-white px-6 py-3 rounded-full font-bold text-center">
-                (928) 555-1234
+              <a href="tel:+19289107578" className="bg-amber-500 text-white px-6 py-3 rounded-full font-bold text-center">
+                (928) 910-7578
               </a>
             </div>
           </div>
@@ -104,7 +104,7 @@ function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Prescott&apos;s professional gutter guard installation protects your home from clogs, water damage, and costly repairs — <strong className="text-white">backed by our lifetime warranty</strong>.
+            Prescott&apos;s professional gutter guard installation protects your home from clogs, water damage, and costly repairs. <strong className="text-white">Backed by our lifetime warranty</strong>.
           </p>
 
           {/* CTA Buttons */}
@@ -116,10 +116,10 @@ function Hero() {
               Get Your FREE Estimate →
             </a>
             <a
-              href="tel:+19285551234"
+              href="tel:+19289107578"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all inline-flex items-center gap-2"
             >
-              <Phone className="w-5 h-5" /> (928) 555-1234
+              <Phone className="w-5 h-5" /> (928) 910-7578
             </a>
           </div>
 
@@ -159,7 +159,7 @@ function ProblemSection() {
     {
       icon: <DollarSign className="w-12 h-12" />,
       title: "Expensive Water Damage",
-      description: "Clogged gutters cause foundation cracks, basement flooding, and roof damage — costing $5,000+ to repair.",
+      description: "Clogged gutters cause foundation cracks, basement flooding, and roof damage, costing $5,000+ to repair.",
     },
     {
       icon: <Bug className="w-12 h-12" />,
@@ -210,7 +210,7 @@ function ServicesSection() {
     {
       icon: <PiggyBank className="w-12 h-12" />,
       title: "Saves You Money",
-      description: "No more hiring cleaners twice a year. Our guards pay for themselves in just 3-4 years — then it's pure savings.",
+      description: "No more hiring cleaners twice a year. Our guards pay for themselves in just 3-4 years, then it's pure savings.",
     },
     {
       icon: <HomeIcon className="w-12 h-12" />,
@@ -225,7 +225,7 @@ function ServicesSection() {
     {
       icon: <Clock className="w-12 h-12" />,
       title: "Fast Installation",
-      description: "Most homes completed in just one day. We respect your time and property — we'll leave your yard cleaner than we found it.",
+      description: "Most homes completed in just one day. We respect your time and property, and we'll leave your yard cleaner than we found it.",
     },
   ];
 
@@ -246,9 +246,9 @@ function ServicesSection() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl border-2 border-gray-100 hover:border-blue-500 hover:shadow-xl transition-all duration-300"
+              className="p-8 rounded-2xl border-2 border-gray-100"
             >
-              <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform">
+              <div className="text-blue-600 mb-4">
                 {benefit.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
@@ -305,7 +305,7 @@ function WhyUsSection() {
               {[
                 "Owner on every job site",
                 "No high-pressure sales tactics",
-                "Honest, upfront pricing — no surprises",
+                "Honest, upfront pricing with no surprises",
                 "We clean up after ourselves",
                 "Background-checked, drug-free team",
               ].map((item, index) => (
@@ -372,7 +372,7 @@ function PromiseSection() {
     {
       icon: <ShieldCheck className="w-8 h-8" />,
       title: "We Stand Behind Our Work",
-      description: "If something isn't right, we'll make it right — no questions asked. Your satisfaction is our reputation.",
+      description: "If something isn't right, we'll make it right, no questions asked. Your satisfaction is our reputation.",
     },
     {
       icon: <HomeIcon className="w-8 h-8" />,
@@ -382,7 +382,7 @@ function PromiseSection() {
     {
       icon: <Phone className="w-8 h-8" />,
       title: "A Real Person Answers",
-      description: "Call us and you'll talk to a real human who can actually help — not a robot or endless phone tree.",
+      description: "Call us and you'll talk to a real human who can actually help, not a robot or endless phone tree.",
     },
     {
       icon: <Check className="w-8 h-8" />,
@@ -452,7 +452,7 @@ function GuaranteeSection() {
               },
               {
                 title: "Price Match Promise",
-                description: "Found a lower quote for the same quality? Show us and we'll match it — guaranteed.",
+                description: "Found a lower quote for the same quality? Show us and we'll match it. Guaranteed.",
               },
             ].map((guarantee, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
@@ -467,19 +467,61 @@ function GuaranteeSection() {
   );
 }
 
+// Open Now Badge Component
+function OpenNowBadge() {
+  return (
+    <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500 text-green-600 px-4 py-2 rounded-full text-sm font-semibold">
+      <span className="relative flex h-3 w-3">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+      </span>
+      Open Now
+    </div>
+  );
+}
+
 // Contact/CTA Section
 function ContactSection() {
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone }),
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setName('');
+        setPhone('');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
-            <span className="text-blue-600 font-semibold text-lg">Get Started Today</span>
+            <div className="mb-4">
+              <OpenNowBadge />
+            </div>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">
               Ready to Protect Your Home?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Get your free, no-obligation estimate today. We&apos;ll assess your gutters, answer all your questions, and provide an honest quote — no pressure, no gimmicks.
+              Get your free, no-obligation estimate today. We&apos;ll assess your gutters, answer all your questions, and provide an honest quote. No pressure, no gimmicks.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -488,11 +530,11 @@ function ContactSection() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900 text-lg">Call Us Directly</h4>
-                  <a href="tel:+19285551234" className="text-2xl font-bold text-blue-600 hover:text-blue-800">
-                    (928) 555-1234
+                  <h4 className="font-bold text-gray-900 text-lg">Call Us Anytime</h4>
+                  <a href="tel:+19289107578" className="text-2xl font-bold text-blue-600 hover:text-blue-800">
+                    (928) 910-7578
                   </a>
-                  <p className="text-gray-500 text-sm mt-1">Mon-Sat: 7am - 6pm</p>
+                  <p className="text-gray-500 text-sm mt-1">7 Days a Week</p>
                 </div>
               </div>
 
@@ -511,82 +553,61 @@ function ContactSection() {
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-3xl shadow-2xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Your FREE Estimate</h3>
-            <p className="text-gray-600 mb-6">Fill out the form and we&apos;ll contact you within 24 hours.</p>
+            <p className="text-gray-600 mb-6">Leave your info and we&apos;ll call you back.</p>
 
-            <form className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
+            {status === 'success' ? (
+              <div className="text-center py-8">
+                <div className="bg-green-100 text-green-800 p-4 rounded-lg mb-4">
+                  <Check className="w-12 h-12 mx-auto mb-2" />
+                  <p className="text-xl font-bold">Thank you!</p>
+                  <p>We&apos;ll call you back shortly.</p>
+                </div>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Name *</label>
                   <input
                     type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="John"
+                    placeholder="John Smith"
                     required
                   />
                 </div>
+
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
                   <input
-                    type="text"
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Smith"
+                    placeholder="(928) 910-7578"
                     required
                   />
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
-                <input
-                  type="tel"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="(928) 555-1234"
-                  required
-                />
-              </div>
+                {status === 'error' && (
+                  <div className="bg-red-100 text-red-800 p-3 rounded-lg text-sm">
+                    Something went wrong. Please call us directly at (928) 910-7578.
+                  </div>
+                )}
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="john@example.com"
-                />
-              </div>
+                <button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="w-full bg-amber-500 hover:bg-amber-600 disabled:bg-amber-300 text-white py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-lg"
+                >
+                  {status === 'loading' ? 'Sending...' : 'Get My FREE Estimate'}
+                </button>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Street Address *</label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="123 Main St, Prescott, AZ"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">How did you hear about us?</label>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white">
-                  <option value="">Select an option</option>
-                  <option value="google">Google Search</option>
-                  <option value="facebook">Facebook</option>
-                  <option value="neighbor">Neighbor Referral</option>
-                  <option value="yard-sign">Yard Sign</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-amber-500 hover:bg-amber-600 text-white py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-lg"
-              >
-                Get My FREE Estimate →
-              </button>
-
-              <p className="text-center text-sm text-gray-500 flex items-center justify-center gap-1">
-                <Lock className="w-4 h-4" /> Your information is secure and will never be shared.
-              </p>
-            </form>
+                <p className="text-center text-sm text-gray-500 flex items-center justify-center gap-1">
+                  <Lock className="w-4 h-4" /> Your information is secure and will never be shared.
+                </p>
+              </form>
+            )}
           </div>
         </div>
       </div>
@@ -607,11 +628,11 @@ function FAQSection() {
     },
     {
       question: "What's included in the lifetime warranty?",
-      answer: "Our lifetime warranty covers both materials and labor. If your gutters ever clog or the guards fail for any reason, we'll come back and fix them at no cost to you — for as long as you own your home.",
+      answer: "Our lifetime warranty covers both materials and labor. If your gutters ever clog or the guards fail for any reason, we'll come back and fix them at no cost to you, for as long as you own your home.",
     },
     {
       question: "How do your guards handle heavy rain?",
-      answer: "Our micro-mesh design handles up to 22 inches of rain per hour — far exceeding even the heaviest Arizona monsoons. Water flows through while debris slides off.",
+      answer: "Our micro-mesh design handles up to 22 inches of rain per hour, far exceeding even the heaviest Arizona monsoons. Water flows through while debris slides off.",
     },
     {
       question: "Do you offer financing?",
@@ -656,7 +677,7 @@ function FinalCTA() {
           Stop Worrying About Your Gutters
         </h2>
         <p className="text-xl text-blue-100 mb-8">
-          Protect your home with gutter guards that actually work — backed by our lifetime warranty.
+          Protect your home with gutter guards that actually work, backed by our lifetime warranty.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -666,10 +687,10 @@ function FinalCTA() {
             Get Your FREE Estimate →
           </a>
           <a
-            href="tel:+19285551234"
+            href="tel:+19289107578"
             className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all inline-flex items-center justify-center gap-2"
           >
-            <Phone className="w-5 h-5" /> (928) 555-1234
+            <Phone className="w-5 h-5" /> (928) 910-7578
           </a>
         </div>
       </div>
@@ -712,17 +733,17 @@ function Footer() {
             <h4 className="text-white font-bold mb-4">Contact Us</h4>
             <ul className="space-y-2">
               <li>
-                <a href="tel:+19285551234" className="hover:text-white transition-colors">
-                  (928) 555-1234
+                <a href="tel:+19289107578" className="hover:text-white transition-colors">
+                  (928) 910-7578
                 </a>
               </li>
               <li>
-                <a href="mailto:info@prescottgutterguards.com" className="hover:text-white transition-colors">
-                  info@prescottgutterguards.com
+                <a href="mailto:prescottgutterguards@gmail.com" className="hover:text-white transition-colors">
+                  prescottgutterguards@gmail.com
                 </a>
               </li>
               <li>Prescott, AZ</li>
-              <li>Mon-Sat: 7am - 6pm</li>
+              <li>7 Days a Week</li>
             </ul>
           </div>
         </div>

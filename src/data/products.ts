@@ -9,9 +9,6 @@ export interface Product {
   tierLabel: string;
   name: string;
   tagline: string;
-  priceRange: string;
-  pricePerFoot: string;
-  typicalHome: string;
   color: string;
   features: {
     title: string;
@@ -33,9 +30,6 @@ export const products: Product[] = [
     tierLabel: "Good",
     name: "Raptor Gutter Guard",
     tagline: "Professional-Grade Protection at a Smart Price",
-    priceRange: "$1,050 - $2,100",
-    pricePerFoot: "$6 - $12 per foot",
-    typicalHome: "Typical 175 ft home",
     color: "blue",
     features: [
       {
@@ -82,9 +76,6 @@ export const products: Product[] = [
     tierLabel: "Better",
     name: "LeafBlaster Pro All-Aluminum",
     tagline: "The Perfect Balance of Performance & Value",
-    priceRange: "$1,750 - $3,150",
-    pricePerFoot: "$10 - $18 per foot",
-    typicalHome: "Typical 175 ft home",
     color: "green",
     features: [
       {
@@ -124,9 +115,9 @@ export const products: Product[] = [
       "Primary residences where a 40-year warranty provides peace of mind",
     ],
     highlight: {
-      title: "Compare & Save",
+      title: "Best Value",
       description:
-        "LeafFilter charges $25-$50/ft for similar protection. Our price: $10-$18/ft. Same quality. Same warranty. Half the price.",
+        "Get the same quality and warranty as the big national brands — without the inflated prices or pushy sales tactics.",
     },
     manufacturer: "LeafBlaster Pro® is manufactured by Gutterglove®, The Nation's Most Trusted Gutter Guard®",
   },
@@ -136,9 +127,6 @@ export const products: Product[] = [
     tierLabel: "Best",
     name: "LeafBlaster Pro Frame-Reinforced",
     tagline: "The Ultimate Protection for Prescott's Ponderosa Pines",
-    priceRange: "$3,150 - $4,375",
-    pricePerFoot: "$18 - $25 per foot",
-    typicalHome: "Typical 175 ft home",
     color: "amber",
     features: [
       {

@@ -8,6 +8,9 @@ import {
   ArrowRight,
   Star,
   Phone,
+  Clock,
+  Trash2,
+  RefreshCw,
 } from "lucide-react";
 import { products, Product } from "@/data/products";
 import { locations } from "@/data/locations";
@@ -15,8 +18,20 @@ import { locations } from "@/data/locations";
 export const metadata: Metadata = {
   title: "Gutter Guard Services | Prescott Gutter Guards",
   description:
-    "Professional gutter guard installation in Prescott, AZ. Choose from our Good, Better, Best options: Raptor, LeafBlaster Pro, and LeafBlaster Pro Frame-Reinforced. Free estimates.",
+    "Professional gutter guard installation, removal, and replacement in Prescott, AZ. Choose from our Good, Better, Best options. Call us 7 days a week for a free estimate.",
 };
+
+function OpenNowBadge() {
+  return (
+    <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500 text-green-400 px-4 py-2 rounded-full text-sm font-semibold">
+      <span className="relative flex h-3 w-3">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+      </span>
+      Open Now - 7 Days a Week
+    </div>
+  );
+}
 
 function ProductCard({ product }: { product: Product }) {
   const colorClasses = {
@@ -70,17 +85,6 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="bg-white p-6">
-        {/* Price */}
-        <div className="border-b border-gray-200 pb-6 mb-6">
-          <div className="text-sm text-gray-500 mb-1">Installed Price</div>
-          <div className={`text-3xl font-bold ${colors.text}`}>
-            {product.pricePerFoot}
-          </div>
-          <div className="text-sm text-gray-500 mt-1">
-            {product.typicalHome}: {product.priceRange}
-          </div>
-        </div>
-
         {/* Image Placeholder */}
         <div className={`${colors.bgLight} rounded-xl p-8 mb-6 text-center`}>
           <div className={`${colors.text} text-sm font-medium`}>
@@ -200,15 +204,16 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Professional Gutter Guard Installation
+          <OpenNowBadge />
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 mt-6">
+            Professional Gutter Services
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-            Choose the right protection for your home. We offer three tiers of
-            Gutterglove products — all backed by industry-leading warranties and
+            Gutter guard installation, old gutter removal, and full replacement. We offer three tiers of
+            Gutterglove products, all backed by industry-leading warranties and
             our satisfaction guarantee.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-white/90">
+          <div className="flex flex-wrap justify-center gap-6 text-white/90 mb-8">
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-green-400" />
               <span>25-40 Year Warranties</span>
@@ -221,6 +226,58 @@ export default function ServicesPage() {
               <Droplets className="w-5 h-5 text-blue-300" />
               <span>Handles 150+ in/hr Rain</span>
             </div>
+          </div>
+          <a
+            href="tel:+19289107578"
+            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+          >
+            <Phone className="w-6 h-6" /> Call Us Anytime: (928) 910-7578
+          </a>
+        </div>
+      </section>
+
+      {/* Other Services */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link
+              href="/services/gutter-removal"
+              className="group bg-gray-50 hover:bg-blue-50 p-8 rounded-2xl transition-all border-2 border-transparent hover:border-blue-200"
+            >
+              <div className="flex items-start gap-4">
+                <div className="bg-red-100 p-3 rounded-xl">
+                  <Trash2 className="w-8 h-8 text-red-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 flex items-center gap-2">
+                    Gutter Guard Removal
+                    <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </h3>
+                  <p className="text-gray-600 mt-2">
+                    Got old, failing gutter guards? We remove them properly and prepare your gutters for an upgrade.
+                  </p>
+                </div>
+              </div>
+            </Link>
+            <Link
+              href="/services/gutter-replacement"
+              className="group bg-gray-50 hover:bg-blue-50 p-8 rounded-2xl transition-all border-2 border-transparent hover:border-blue-200"
+            >
+              <div className="flex items-start gap-4">
+                <div className="bg-blue-100 p-3 rounded-xl">
+                  <RefreshCw className="w-8 h-8 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 flex items-center gap-2">
+                    Full Gutter Replacement
+                    <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </h3>
+                  <p className="text-gray-600 mt-2">
+                    Gutters beyond repair? We replace your entire gutter system and install guards in one visit.
+                  </p>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -364,28 +421,23 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-blue-800 to-blue-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-6">
+            <OpenNowBadge />
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Not Sure Which Option is Right for You?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             We&apos;ll visit your home, assess your gutters, and recommend the
-            best solution for your specific situation — no pressure, no
+            best solution for your specific situation. No pressure, no
             obligation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/#contact"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
-            >
-              Get Your FREE Estimate
-            </Link>
-            <a
-              href="tel:+19285551234"
-              className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all inline-flex items-center justify-center gap-2"
-            >
-              <Phone className="w-5 h-5" /> (928) 555-1234
-            </a>
-          </div>
+          <a
+            href="tel:+19289107578"
+            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+          >
+            <Phone className="w-6 h-6" /> Call Us 7 Days a Week: (928) 910-7578
+          </a>
         </div>
       </section>
     </main>
