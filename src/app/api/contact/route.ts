@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-      from: 'Prescott Gutter Guards <onboarding@resend.dev>',
+      from: 'Prescott Gutter Guards <noreply@prescottgutterguards.com>',
       to: 'prescottgutterguards@gmail.com',
       subject: `New Estimate Request from ${name}`,
       html: `
