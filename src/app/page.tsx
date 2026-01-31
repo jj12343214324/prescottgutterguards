@@ -447,13 +447,13 @@ function GuaranteeSection() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Our Triple-Protection Guarantee
+            Our Guarantee
           </h2>
           <p className="text-xl text-gray-300 mb-12">
             We stand behind our work with the strongest guarantees in the industry.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {[
               {
                 title: "Lifetime Warranty",
@@ -462,10 +462,6 @@ function GuaranteeSection() {
               {
                 title: "100% Satisfaction",
                 description: "Not happy with our work? We'll make it right or give you a full refund. Your satisfaction is everything.",
-              },
-              {
-                title: "Price Match Promise",
-                description: "Found a lower quote for the same quality? Show us and we'll match it. Guaranteed.",
               },
             ].map((guarantee, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
