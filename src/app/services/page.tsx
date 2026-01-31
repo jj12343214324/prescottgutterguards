@@ -23,10 +23,10 @@ export const metadata: Metadata = {
 
 function OpenNowBadge() {
   return (
-    <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500 text-green-400 px-4 py-2 rounded-full text-sm font-semibold">
+    <div className="inline-flex items-center gap-2 bg-[#79b939]/20 border border-[#79b939] text-[#79b939] px-4 py-2 rounded-lg text-sm font-semibold">
       <span className="relative flex h-3 w-3">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#79b939] opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-[#79b939]"></span>
       </span>
       Open Now - 7 Days a Week
     </div>
@@ -36,25 +36,25 @@ function OpenNowBadge() {
 function ProductCard({ product }: { product: Product }) {
   const colorClasses = {
     blue: {
-      bg: "bg-blue-600",
-      bgLight: "bg-blue-50",
-      text: "text-blue-600",
-      border: "border-blue-600",
-      badge: "bg-blue-100 text-blue-800",
+      bg: "bg-[#79b939]",
+      bgLight: "bg-[#79b939]/10",
+      text: "text-[#79b939]",
+      border: "border-[#79b939]",
+      badge: "bg-[#79b939]/20 text-[#5a9a1f]",
     },
     green: {
-      bg: "bg-green-600",
-      bgLight: "bg-green-50",
-      text: "text-green-600",
-      border: "border-green-600",
-      badge: "bg-green-100 text-green-800",
+      bg: "bg-[#79b939]",
+      bgLight: "bg-[#79b939]/10",
+      text: "text-[#79b939]",
+      border: "border-[#79b939]",
+      badge: "bg-[#79b939]/20 text-[#5a9a1f]",
     },
     amber: {
-      bg: "bg-amber-500",
-      bgLight: "bg-amber-50",
-      text: "text-amber-600",
-      border: "border-amber-500",
-      badge: "bg-amber-100 text-amber-800",
+      bg: "bg-[#79b939]",
+      bgLight: "bg-gray-100",
+      text: "text-[#79b939]",
+      border: "border-[#79b939]",
+      badge: "bg-[#79b939]/20 text-[#5a9a1f]",
     },
   };
 
@@ -64,11 +64,11 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <div
       className={`relative rounded-3xl overflow-hidden ${
-        isBest ? "ring-4 ring-amber-400 shadow-2xl scale-105" : "shadow-xl"
+        isBest ? "ring-4 ring-[#79b939] shadow-2xl scale-105" : "shadow-xl"
       }`}
     >
       {isBest && (
-        <div className="absolute top-0 left-0 right-0 bg-amber-500 text-white text-center py-2 font-bold flex items-center justify-center gap-2">
+        <div className="absolute top-0 left-0 right-0 bg-[#79b939] text-white text-center py-2 font-bold flex items-center justify-center gap-2">
           <Star className="w-4 h-4 fill-current" /> PREMIUM CHOICE{" "}
           <Star className="w-4 h-4 fill-current" />
         </div>
@@ -133,7 +133,7 @@ function ProductCard({ product }: { product: Product }) {
         {/* CTA */}
         <Link
           href="#contact"
-          className={`block w-full ${colors.bg} hover:opacity-90 text-white py-4 rounded-full text-lg font-bold text-center transition-all`}
+          className={`block w-full ${colors.bg} hover:opacity-90 text-white py-4 rounded-lg text-lg font-bold text-center transition-all`}
         >
           Get Free Estimate
         </Link>
@@ -172,9 +172,9 @@ function SpecsTable({ product }: { product: Product }) {
 
 function PerfectForSection({ product }: { product: Product }) {
   const colors = {
-    good: "text-blue-600",
-    better: "text-green-600",
-    best: "text-amber-600",
+    good: "text-[#79b939]",
+    better: "text-[#79b939]",
+    best: "text-[#79b939]",
   };
 
   return (
@@ -202,20 +202,20 @@ export default function ServicesPage() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20">
+      <section className="bg-gradient-to-br from-black via-gray-900 to-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <OpenNowBadge />
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 mt-6">
             Professional Gutter Services
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Gutter guard installation, old gutter removal, and full replacement. We offer three tiers of
             Gutterglove products, all backed by industry-leading warranties and
             our satisfaction guarantee.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-white/90 mb-8">
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-green-400" />
+              <ShieldCheck className="w-5 h-5 text-[#79b939]" />
               <span>25-40 Year Warranties</span>
             </div>
             <div className="flex items-center gap-2">
@@ -229,7 +229,7 @@ export default function ServicesPage() {
           </div>
           <a
             href="tel:+19289107578"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+            className="inline-flex items-center gap-2 bg-[#79b939] hover:bg-[#5a9a1f] text-white px-8 py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
           >
             <Phone className="w-6 h-6" /> Call Us Anytime: (928) 910-7578
           </a>
@@ -242,14 +242,14 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <Link
               href="/services/gutter-removal"
-              className="group bg-gray-50 hover:bg-blue-50 p-8 rounded-2xl transition-all border-2 border-transparent hover:border-blue-200"
+              className="group bg-gray-50 hover:bg-[#79b939]/10 p-8 rounded-2xl transition-all border-2 border-transparent hover:border-blue-200"
             >
               <div className="flex items-start gap-4">
                 <div className="bg-red-100 p-3 rounded-xl">
                   <Trash2 className="w-8 h-8 text-red-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 flex items-center gap-2">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#79b939] flex items-center gap-2">
                     Gutter Guard Removal
                     <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </h3>
@@ -261,14 +261,14 @@ export default function ServicesPage() {
             </Link>
             <Link
               href="/services/gutter-replacement"
-              className="group bg-gray-50 hover:bg-blue-50 p-8 rounded-2xl transition-all border-2 border-transparent hover:border-blue-200"
+              className="group bg-gray-50 hover:bg-[#79b939]/10 p-8 rounded-2xl transition-all border-2 border-transparent hover:border-blue-200"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-blue-100 p-3 rounded-xl">
-                  <RefreshCw className="w-8 h-8 text-blue-600" />
+                <div className="bg-[#79b939]/20 p-3 rounded-xl">
+                  <RefreshCw className="w-8 h-8 text-[#79b939]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 flex items-center gap-2">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#79b939] flex items-center gap-2">
                     Full Gutter Replacement
                     <ArrowRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </h3>
@@ -286,7 +286,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-blue-600 font-semibold text-lg">
+            <span className="text-[#79b939] font-semibold text-lg">
               Our Products
             </span>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
@@ -336,7 +336,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-blue-600 font-semibold text-lg">
+            <span className="text-[#79b939] font-semibold text-lg">
               Service Areas
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">
@@ -358,7 +358,7 @@ export default function ServicesPage() {
                   href={`/services/${city.slug}`}
                   className="group bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:scale-105"
                 >
-                  <div className="font-bold text-gray-900 group-hover:text-blue-600 flex items-center justify-between">
+                  <div className="font-bold text-gray-900 group-hover:text-[#79b939] flex items-center justify-between">
                     {city.name}
                     <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -382,7 +382,7 @@ export default function ServicesPage() {
                   href={`/services/${neighborhood.slug}`}
                   className="group bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:scale-105"
                 >
-                  <div className="font-bold text-gray-900 group-hover:text-blue-600 flex items-center justify-between">
+                  <div className="font-bold text-gray-900 group-hover:text-[#79b939] flex items-center justify-between">
                     {neighborhood.name}
                     <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -406,7 +406,7 @@ export default function ServicesPage() {
                   href={`/services/${community.slug}`}
                   className="group bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:scale-105"
                 >
-                  <div className="font-bold text-gray-900 group-hover:text-blue-600 flex items-center justify-between">
+                  <div className="font-bold text-gray-900 group-hover:text-[#79b939] flex items-center justify-between">
                     {community.name}
                     <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -419,7 +419,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-800 to-blue-900">
+      <section className="py-16 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6">
             <OpenNowBadge />
@@ -427,14 +427,14 @@ export default function ServicesPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Not Sure Which Option is Right for You?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             We&apos;ll visit your home, assess your gutters, and recommend the
             best solution for your specific situation. No pressure, no
             obligation.
           </p>
           <a
             href="tel:+19289107578"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+            className="inline-flex items-center gap-2 bg-[#79b939] hover:bg-[#5a9a1f] text-white px-8 py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
           >
             <Phone className="w-6 h-6" /> Call Us 7 Days a Week: (928) 910-7578
           </a>

@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 
 function OpenNowBadge() {
   return (
-    <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500 text-green-400 px-4 py-2 rounded-full text-sm font-semibold">
+    <div className="inline-flex items-center gap-2 bg-[#79b939]/20 border border-[#79b939] text-[#79b939] px-4 py-2 rounded-lg text-sm font-semibold">
       <span className="relative flex h-3 w-3">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#79b939] opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-[#79b939]"></span>
       </span>
       Open Now - 7 Days a Week
     </div>
@@ -63,7 +63,7 @@ export default function GutterReplacementPage() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-20">
+      <section className="bg-gradient-to-br from-black via-gray-900 to-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <OpenNowBadge />
           <div className="inline-flex items-center justify-center bg-white/10 p-4 rounded-full mb-6 mt-6">
@@ -72,13 +72,13 @@ export default function GutterReplacementPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Full Gutter Replacement
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Sometimes gutters are beyond saving. When that happens, we replace your entire system
             with new seamless aluminum gutters and install guards in one visit.
           </p>
           <a
             href="tel:+19289107578"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+            className="inline-flex items-center gap-2 bg-[#79b939] hover:bg-[#5a9a1f] text-white px-8 py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
           >
             <Phone className="w-6 h-6" /> Call Us Anytime: (928) 910-7578
           </a>
@@ -119,7 +119,7 @@ export default function GutterReplacementPage() {
               <div className="space-y-4">
                 {benefits.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
+                    <Check className="w-5 h-5 text-[#79b939] mt-0.5 shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
@@ -144,8 +144,8 @@ export default function GutterReplacementPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ShieldCheck className="w-8 h-8 text-blue-600" />
+              <div className="bg-[#79b939]/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ShieldCheck className="w-8 h-8 text-[#79b939]" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Professional Crew</h3>
               <p className="text-gray-600">
@@ -153,8 +153,8 @@ export default function GutterReplacementPage() {
               </p>
             </div>
             <div className="text-center p-6">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Droplets className="w-8 h-8 text-green-600" />
+              <div className="bg-[#79b939]/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Droplets className="w-8 h-8 text-[#79b939]" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Quality Materials</h3>
               <p className="text-gray-600">
@@ -162,8 +162,8 @@ export default function GutterReplacementPage() {
               </p>
             </div>
             <div className="text-center p-6">
-              <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <RefreshCw className="w-8 h-8 text-amber-600" />
+              <div className="bg-[#79b939]/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <RefreshCw className="w-8 h-8 text-[#79b939]" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Complete Service</h3>
               <p className="text-gray-600">
@@ -175,7 +175,7 @@ export default function GutterReplacementPage() {
       </section>
 
       {/* Guard Options */}
-      <section className="py-12 bg-blue-50">
+      <section className="py-12 bg-[#79b939]/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="flex flex-col md:flex-row items-center gap-6">
@@ -189,7 +189,7 @@ export default function GutterReplacementPage() {
               </div>
               <Link
                 href="/services"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold inline-flex items-center gap-2 transition-colors shrink-0"
+                className="bg-[#79b939] hover:bg-[#5a9a1f] text-white px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 transition-colors shrink-0"
               >
                 View Guard Options <ArrowRight className="w-4 h-4" />
               </Link>
@@ -199,7 +199,7 @@ export default function GutterReplacementPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-800 to-blue-900">
+      <section className="py-16 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6">
             <OpenNowBadge />
@@ -207,12 +207,12 @@ export default function GutterReplacementPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Let's Take a Look at Your Gutters
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             We'll inspect your gutters and give you an honest assessment. If they can be saved, we'll tell you. If not, we'll give you options.
           </p>
           <a
             href="tel:+19289107578"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+            className="inline-flex items-center gap-2 bg-[#79b939] hover:bg-[#5a9a1f] text-white px-8 py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
           >
             <Phone className="w-6 h-6" /> Call Us 7 Days a Week: (928) 910-7578
           </a>

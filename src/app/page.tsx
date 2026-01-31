@@ -30,18 +30,18 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-blue-800">
-              <span className="text-amber-500">Prescott</span> Gutter Guards
+            <div className="text-2xl font-bold text-black">
+              <span className="text-[#79b939]">Prescott</span> Gutter Guards
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/services" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Services</a>
-            <a href="#why-us" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Why Us</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Our Promise</a>
-            <a href="#guarantee" className="text-gray-700 hover:text-blue-800 font-medium transition-colors">Guarantee</a>
-            <a href="tel:+19289107578" className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg">
+            <a href="/services" className="text-gray-700 hover:text-[#79b939] font-medium transition-colors">Services</a>
+            <a href="#why-us" className="text-gray-700 hover:text-[#79b939] font-medium transition-colors">Why Us</a>
+            <a href="#testimonials" className="text-gray-700 hover:text-[#79b939] font-medium transition-colors">Our Promise</a>
+            <a href="#guarantee" className="text-gray-700 hover:text-[#79b939] font-medium transition-colors">Guarantee</a>
+            <a href="tel:+19289107578" className="bg-[#79b939] hover:bg-[#5a9a1f] text-white px-6 py-3 rounded-lg font-bold transition-all transform hover:scale-105 shadow-lg">
               (928) 910-7578
             </a>
           </div>
@@ -50,7 +50,7 @@ function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 hover:text-blue-800 p-2"
+              className="text-gray-700 hover:text-[#79b939] p-2"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -65,11 +65,11 @@ function Navigation() {
         {mobileMenuOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-4">
-              <a href="/services" className="text-gray-700 hover:text-blue-800 font-medium">Services</a>
-              <a href="#why-us" className="text-gray-700 hover:text-blue-800 font-medium">Why Us</a>
-              <a href="#testimonials" className="text-gray-700 hover:text-blue-800 font-medium">Our Promise</a>
-              <a href="#guarantee" className="text-gray-700 hover:text-blue-800 font-medium">Guarantee</a>
-              <a href="tel:+19289107578" className="bg-amber-500 text-white px-6 py-3 rounded-full font-bold text-center">
+              <a href="/services" className="text-gray-700 hover:text-[#79b939] font-medium">Services</a>
+              <a href="#why-us" className="text-gray-700 hover:text-[#79b939] font-medium">Why Us</a>
+              <a href="#testimonials" className="text-gray-700 hover:text-[#79b939] font-medium">Our Promise</a>
+              <a href="#guarantee" className="text-gray-700 hover:text-[#79b939] font-medium">Guarantee</a>
+              <a href="tel:+19289107578" className="bg-[#79b939] text-white px-6 py-3 rounded-lg font-bold text-center">
                 (928) 910-7578
               </a>
             </div>
@@ -93,17 +93,17 @@ function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           {/* Trust Badge */}
-          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-            <ShieldCheck className="w-5 h-5 text-amber-300 mr-2" />
+          <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 mb-6">
+            <ShieldCheck className="w-5 h-5 text-[#79b939] mr-2" />
             <span className="text-white text-sm font-medium">Locally Owned & Operated | Licensed & Insured</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
             Never Pay for Gutter Cleaning
-            <span className="block text-amber-300">Again. Guaranteed.</span>
+            <span className="block text-[#79b939]">Again. Guaranteed.</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Prescott&apos;s professional gutter guard installation protects your home from clogs, water damage, and costly repairs. <strong className="text-white">Backed by our lifetime warranty</strong>.
           </p>
 
@@ -111,13 +111,13 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a
               href="#contact"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl animate-pulse-glow"
+              className="bg-[#79b939] hover:bg-[#5a9a1f] text-white px-8 py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-xl animate-pulse-glow"
             >
               Get Your FREE Estimate →
             </a>
             <a
               href="tel:+19289107578"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all inline-flex items-center gap-2"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg text-xl font-bold transition-all inline-flex items-center gap-2"
             >
               <Phone className="w-5 h-5" /> (928) 910-7578
             </a>
@@ -126,19 +126,19 @@ function Hero() {
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center gap-8 text-white/90">
             <div className="flex items-center">
-              <Check className="w-6 h-6 text-green-400 mr-2" />
+              <Check className="w-6 h-6 text-[#79b939] mr-2" />
               <span>Free Estimates</span>
             </div>
             <div className="flex items-center">
-              <Check className="w-6 h-6 text-green-400 mr-2" />
+              <Check className="w-6 h-6 text-[#79b939] mr-2" />
               <span>Lifetime Warranty</span>
             </div>
             <div className="flex items-center">
-              <Check className="w-6 h-6 text-green-400 mr-2" />
+              <Check className="w-6 h-6 text-[#79b939] mr-2" />
               <span>Licensed & Insured</span>
             </div>
             <div className="flex items-center">
-              <Check className="w-6 h-6 text-green-400 mr-2" />
+              <Check className="w-6 h-6 text-[#79b939] mr-2" />
               <span>Same-Week Install</span>
             </div>
           </div>
@@ -233,7 +233,7 @@ function ServicesSection() {
     <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-blue-600 font-semibold text-lg">Why Choose Us</span>
+          <span className="text-[#79b939] font-semibold text-lg">Why Choose Us</span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
             The Prescott Gutter Guards Difference
           </h2>
@@ -248,7 +248,7 @@ function ServicesSection() {
               key={index}
               className="p-8 rounded-2xl border-2 border-gray-100"
             >
-              <div className="text-blue-600 mb-4">
+              <div className="text-[#79b939] mb-4">
                 {benefit.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
@@ -277,7 +277,7 @@ function StatsSection() {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl md:text-6xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-blue-200 text-lg">{stat.label}</div>
+              <div className="text-gray-300 text-lg">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -293,7 +293,7 @@ function WhyUsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-blue-600 font-semibold text-lg">Local & Committed</span>
+            <span className="text-[#79b939] font-semibold text-lg">Local & Committed</span>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">
               Your Neighbors in Gutter Protection
             </h2>
@@ -310,7 +310,7 @@ function WhyUsSection() {
                 "Background-checked, drug-free team",
               ].map((item, index) => (
                 <div key={index} className="flex items-center">
-                  <div className="bg-green-500 rounded-full p-1 mr-4">
+                  <div className="bg-[#79b939] rounded-full p-1 mr-4">
                     <Check className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-lg text-gray-700">{item}</span>
@@ -321,7 +321,7 @@ function WhyUsSection() {
 
           <div className="bg-white p-8 rounded-3xl shadow-2xl">
             <div className="text-center mb-6">
-              <div className="inline-flex items-center bg-amber-100 text-amber-800 rounded-full px-4 py-2 text-sm font-semibold mb-4">
+              <div className="inline-flex items-center bg-[#79b939]/20 text-black rounded-full px-4 py-2 text-sm font-semibold mb-4">
                 <Star className="w-4 h-4 fill-current mr-1" /> Limited Time Offer
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Get 15% OFF Your Installation</h3>
@@ -335,13 +335,13 @@ function WhyUsSection() {
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-xl font-bold text-gray-900">Your Price Today</span>
-                <span className="text-3xl font-bold text-green-600">$2,040</span>
+                <span className="text-3xl font-bold text-[#79b939]">$2,040</span>
               </div>
             </div>
 
             <a
               href="#contact"
-              className="block w-full bg-amber-500 hover:bg-amber-600 text-white py-4 rounded-full text-xl font-bold text-center transition-all transform hover:scale-105 shadow-lg"
+              className="block w-full bg-[#79b939] hover:bg-[#5a9a1f] text-white py-4 rounded-lg text-xl font-bold text-center transition-all transform hover:scale-105 shadow-lg"
             >
               Claim Your Discount →
             </a>
@@ -395,7 +395,7 @@ function PromiseSection() {
     <section id="testimonials" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-blue-600 font-semibold text-lg">Our Commitment</span>
+          <span className="text-[#79b939] font-semibold text-lg">Our Commitment</span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
             What We Promise You
           </h2>
@@ -410,7 +410,7 @@ function PromiseSection() {
               key={index}
               className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow"
             >
-              <div className="text-blue-600 mb-4">{promise.icon}</div>
+              <div className="text-[#79b939] mb-4">{promise.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{promise.title}</h3>
               <p className="text-gray-600">{promise.description}</p>
             </div>
@@ -424,11 +424,11 @@ function PromiseSection() {
 // Guarantee Section
 function GuaranteeSection() {
   return (
-    <section id="guarantee" className="py-20 bg-blue-900 text-white">
+    <section id="guarantee" className="py-20 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block mb-8">
-            <div className="bg-amber-500 text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="bg-[#79b939] text-white w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
               <ShieldCheck className="w-12 h-12" />
             </div>
           </div>
@@ -436,7 +436,7 @@ function GuaranteeSection() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Our Triple-Protection Guarantee
           </h2>
-          <p className="text-xl text-blue-200 mb-12">
+          <p className="text-xl text-gray-300 mb-12">
             We stand behind our work with the strongest guarantees in the industry.
           </p>
 
@@ -457,7 +457,7 @@ function GuaranteeSection() {
             ].map((guarantee, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
                 <h3 className="text-xl font-bold mb-3">{guarantee.title}</h3>
-                <p className="text-blue-200">{guarantee.description}</p>
+                <p className="text-gray-300">{guarantee.description}</p>
               </div>
             ))}
           </div>
@@ -470,10 +470,10 @@ function GuaranteeSection() {
 // Open Now Badge Component
 function OpenNowBadge() {
   return (
-    <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500 text-green-600 px-4 py-2 rounded-full text-sm font-semibold">
+    <div className="inline-flex items-center gap-2 bg-[#79b939]/20 border border-[#79b939] text-[#79b939] px-4 py-2 rounded-lg text-sm font-semibold">
       <span className="relative flex h-3 w-3">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#79b939] opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-[#79b939]"></span>
       </span>
       Open Now
     </div>
@@ -526,12 +526,12 @@ function ContactSection() {
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
+                <div className="bg-[#79b939] text-white p-3 rounded-full mr-4">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 text-lg">Call Us Anytime</h4>
-                  <a href="tel:+19289107578" className="text-2xl font-bold text-blue-600 hover:text-blue-800">
+                  <a href="tel:+19289107578" className="text-2xl font-bold text-[#79b939] hover:text-[#5a9a1f]">
                     (928) 910-7578
                   </a>
                   <p className="text-gray-500 text-sm mt-1">7 Days a Week</p>
@@ -539,7 +539,7 @@ function ContactSection() {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white p-3 rounded-full mr-4">
+                <div className="bg-[#79b939] text-white p-3 rounded-full mr-4">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -557,7 +557,7 @@ function ContactSection() {
 
             {status === 'success' ? (
               <div className="text-center py-8">
-                <div className="bg-green-100 text-green-800 p-4 rounded-lg mb-4">
+                <div className="bg-[#79b939]/20 text-[#5a9a1f] p-4 rounded-lg mb-4">
                   <Check className="w-12 h-12 mx-auto mb-2" />
                   <p className="text-xl font-bold">Thank you!</p>
                   <p>We&apos;ll call you back shortly.</p>
@@ -571,7 +571,7 @@ function ContactSection() {
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#79b939] focus:border-[#79b939]"
                     placeholder="John Smith"
                     required
                   />
@@ -583,7 +583,7 @@ function ContactSection() {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#79b939] focus:border-[#79b939]"
                     placeholder="(928) 910-7578"
                     required
                   />
@@ -598,7 +598,7 @@ function ContactSection() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full bg-amber-500 hover:bg-amber-600 disabled:bg-amber-300 text-white py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-lg"
+                  className="w-full bg-[#79b939] hover:bg-[#5a9a1f] disabled:bg-[#a8d66d] text-white py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-lg"
                 >
                   {status === 'loading' ? 'Sending...' : 'Get My FREE Estimate'}
                 </button>
@@ -644,7 +644,7 @@ function FAQSection() {
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-blue-600 font-semibold text-lg">FAQ</span>
+          <span className="text-[#79b939] font-semibold text-lg">FAQ</span>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-2 mb-4">
             Common Questions
           </h2>
@@ -655,7 +655,7 @@ function FAQSection() {
             <details key={index} className="group bg-gray-50 rounded-2xl">
               <summary className="flex justify-between items-center cursor-pointer p-6 font-bold text-lg text-gray-900 list-none">
                 {faq.question}
-                <ChevronDown className="w-6 h-6 text-blue-600 group-open:rotate-180 transition-transform" />
+                <ChevronDown className="w-6 h-6 text-[#79b939] group-open:rotate-180 transition-transform" />
               </summary>
               <div className="px-6 pb-6 text-gray-600">
                 {faq.answer}
@@ -676,19 +676,19 @@ function FinalCTA() {
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
           Stop Worrying About Your Gutters
         </h2>
-        <p className="text-xl text-blue-100 mb-8">
+        <p className="text-xl text-gray-300 mb-8">
           Protect your home with gutter guards that actually work, backed by our lifetime warranty.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#contact"
-            className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+            className="bg-[#79b939] hover:bg-[#5a9a1f] text-white px-8 py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
           >
             Get Your FREE Estimate →
           </a>
           <a
             href="tel:+19289107578"
-            className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-xl font-bold transition-all inline-flex items-center justify-center gap-2"
+            className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-lg text-xl font-bold transition-all inline-flex items-center justify-center gap-2"
           >
             <Phone className="w-5 h-5" /> (928) 910-7578
           </a>
@@ -706,7 +706,7 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <div className="text-2xl font-bold text-white mb-4">
-              <span className="text-amber-500">Prescott</span> Gutter Guards
+              <span className="text-[#79b939]">Prescott</span> Gutter Guards
             </div>
             <p className="mb-4">
               Your local Prescott gutter protection experts. Protecting homes from water damage with professional installation and lifetime warranties.

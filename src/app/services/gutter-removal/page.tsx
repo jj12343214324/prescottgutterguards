@@ -18,10 +18,10 @@ export const metadata: Metadata = {
 
 function OpenNowBadge() {
   return (
-    <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500 text-green-400 px-4 py-2 rounded-full text-sm font-semibold">
+    <div className="inline-flex items-center gap-2 bg-[#79b939]/20 border border-[#79b939] text-[#79b939] px-4 py-2 rounded-lg text-sm font-semibold">
       <span className="relative flex h-3 w-3">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#79b939] opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-[#79b939]"></span>
       </span>
       Open Now - 7 Days a Week
     </div>
@@ -73,7 +73,7 @@ export default function GutterRemovalPage() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-900 py-20">
+      <section className="bg-gradient-to-br from-black via-gray-900 to-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <OpenNowBadge />
           <div className="inline-flex items-center justify-center bg-white/10 p-4 rounded-full mb-6 mt-6">
@@ -82,13 +82,13 @@ export default function GutterRemovalPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Gutter Guard Removal
           </h1>
-          <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Got old guards that don't work? Plastic junk that's warped and ugly? We remove them
             properly and leave your gutters clean and ready for whatever comes next.
           </p>
           <a
             href="tel:+19289107578"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+            className="inline-flex items-center gap-2 bg-[#79b939] hover:bg-[#5a9a1f] text-white px-8 py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
           >
             <Phone className="w-6 h-6" /> Call Us Anytime: (928) 910-7578
           </a>
@@ -131,7 +131,7 @@ export default function GutterRemovalPage() {
           <div className="grid md:grid-cols-4 gap-6">
             {process.map((item, idx) => (
               <div key={idx} className="text-center">
-                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="bg-[#79b939] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -159,7 +159,7 @@ export default function GutterRemovalPage() {
                   "Honest assessment of your gutter condition",
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
+                    <Check className="w-5 h-5 text-[#79b939] mt-0.5 shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
@@ -174,12 +174,12 @@ export default function GutterRemovalPage() {
       </section>
 
       {/* Upgrade CTA */}
-      <section className="py-12 bg-blue-50">
+      <section className="py-12 bg-[#79b939]/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="bg-blue-100 p-4 rounded-xl shrink-0">
-                <Sparkles className="w-10 h-10 text-blue-600" />
+              <div className="bg-[#79b939]/20 p-4 rounded-xl shrink-0">
+                <Sparkles className="w-10 h-10 text-[#79b939]" />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -192,7 +192,7 @@ export default function GutterRemovalPage() {
               </div>
               <Link
                 href="/services"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold inline-flex items-center gap-2 transition-colors shrink-0"
+                className="bg-[#79b939] hover:bg-[#5a9a1f] text-white px-6 py-3 rounded-lg font-bold inline-flex items-center gap-2 transition-colors shrink-0"
               >
                 View Products <ArrowRight className="w-4 h-4" />
               </Link>
@@ -202,7 +202,7 @@ export default function GutterRemovalPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-red-800 to-red-900">
+      <section className="py-16 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6">
             <OpenNowBadge />
@@ -210,12 +210,12 @@ export default function GutterRemovalPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Get Those Old Guards Out of There
           </h2>
-          <p className="text-xl text-red-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Call us and we'll come take a look. Free assessment, honest advice, no pressure.
           </p>
           <a
             href="tel:+19289107578"
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-full text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
+            className="inline-flex items-center gap-2 bg-[#79b939] hover:bg-[#5a9a1f] text-white px-8 py-4 rounded-lg text-xl font-bold transition-all transform hover:scale-105 shadow-xl"
           >
             <Phone className="w-6 h-6" /> Call Us 7 Days a Week: (928) 910-7578
           </a>

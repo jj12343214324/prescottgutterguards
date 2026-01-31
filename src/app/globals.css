@@ -2,11 +2,9 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #1e40af;
-  --primary-dark: #1e3a8a;
-  --secondary: #059669;
-  --accent: #f59e0b;
+  --foreground: #000000;
+  --primary: #79b939;
+  --primary-dark: #5a9a1f;
 }
 
 @theme inline {
@@ -14,8 +12,6 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -31,7 +27,7 @@ html {
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
 }
 
 .text-shadow {
@@ -48,8 +44,8 @@ html {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
-  50% { box-shadow: 0 0 40px rgba(245, 158, 11, 0.8); }
+  0%, 100% { box-shadow: 0 0 20px rgba(121, 185, 57, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(121, 185, 57, 0.8); }
 }
 
 .animate-pulse-glow {

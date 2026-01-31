@@ -61,22 +61,22 @@ export async function generateMetadata({
 function ProductCard({ product, recommended }: { product: Product; recommended: boolean }) {
   const colorClasses = {
     blue: {
-      bg: "bg-blue-600",
-      bgLight: "bg-blue-50",
-      text: "text-blue-600",
-      border: "border-blue-200",
+      bg: "bg-[#79b939]",
+      bgLight: "bg-[#79b939]/10",
+      text: "text-[#79b939]",
+      border: "border-[#79b939]/30",
     },
     green: {
-      bg: "bg-green-600",
-      bgLight: "bg-green-50",
-      text: "text-green-600",
-      border: "border-green-200",
+      bg: "bg-[#79b939]",
+      bgLight: "bg-[#79b939]/10",
+      text: "text-[#79b939]",
+      border: "border-[#79b939]/30",
     },
     amber: {
-      bg: "bg-amber-500",
-      bgLight: "bg-amber-50",
-      text: "text-amber-600",
-      border: "border-amber-200",
+      bg: "bg-[#79b939]",
+      bgLight: "bg-gray-100",
+      text: "text-[#79b939]",
+      border: "border-gray-200",
     },
   };
 
@@ -85,11 +85,11 @@ function ProductCard({ product, recommended }: { product: Product; recommended: 
   return (
     <div
       className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow ${
-        recommended ? "ring-2 ring-amber-400" : ""
+        recommended ? "ring-2 ring-[#79b939]" : ""
       }`}
     >
       {recommended && (
-        <div className="bg-amber-500 text-white text-center py-2 text-sm font-bold flex items-center justify-center gap-1">
+        <div className="bg-[#79b939] text-white text-center py-2 text-sm font-bold flex items-center justify-center gap-1">
           <Star className="w-4 h-4 fill-current" /> RECOMMENDED
         </div>
       )}
@@ -147,9 +147,9 @@ export default async function LocationPage({
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-12 md:py-16">
+      <section className="bg-gradient-to-br from-black via-gray-900 to-black py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-blue-200 mb-4">
+          <div className="flex items-center gap-2 text-gray-400 mb-4">
             <MapPin className="w-5 h-5" />
             <span>
               {location.parentCity ? `${location.parentCity}` : location.type === "city" ? "City" : "Community"}
@@ -160,20 +160,20 @@ export default async function LocationPage({
             Gutter Guards in {location.name}
           </h1>
 
-          <p className="text-lg text-blue-100 max-w-3xl mb-6">
+          <p className="text-lg text-gray-300 max-w-3xl mb-6">
             {location.why}
           </p>
 
           <div className="flex flex-wrap gap-4">
             <Link
               href="/#contact"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full font-bold transition-all"
+              className="bg-[#79b939] hover:bg-[#5a9a1f] text-white px-6 py-3 rounded-lg font-bold transition-all"
             >
               Get Free Estimate
             </Link>
             <a
               href="tel:+19289107578"
-              className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-6 py-3 rounded-full font-bold transition-all inline-flex items-center gap-2"
+              className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-6 py-3 rounded-lg font-bold transition-all inline-flex items-center gap-2"
             >
               <Phone className="w-5 h-5" /> (928) 910-7578
             </a>
@@ -187,7 +187,7 @@ export default async function LocationPage({
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <AlertTriangle className="w-6 h-6 text-amber-500" />
+                <AlertTriangle className="w-6 h-6 text-[#79b939]" />
                 Why {location.name} Needs Gutter Guards
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -236,7 +236,7 @@ export default async function LocationPage({
           <div className="text-center mt-6">
             <Link
               href="/services"
-              className="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center gap-2"
+              className="text-[#79b939] hover:text-[#5a9a1f] font-semibold inline-flex items-center gap-2"
             >
               Full Product Comparison
               <ArrowRight className="w-4 h-4" />
@@ -246,28 +246,28 @@ export default async function LocationPage({
       </section>
 
       {/* Stats */}
-      <section className="py-10 bg-gradient-to-r from-blue-800 to-blue-900">
+      <section className="py-10 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <ShieldCheck className="w-6 h-6 text-amber-400 mx-auto mb-1" />
+              <ShieldCheck className="w-6 h-6 text-[#79b939] mx-auto mb-1" />
               <div className="text-xl font-bold text-white">25-40 Year</div>
-              <div className="text-blue-200 text-sm">Warranty</div>
+              <div className="text-gray-400 text-sm">Warranty</div>
             </div>
             <div>
               <Flame className="w-6 h-6 text-orange-400 mx-auto mb-1" />
               <div className="text-xl font-bold text-white">WUI Certified</div>
-              <div className="text-blue-200 text-sm">Fire Protection</div>
+              <div className="text-gray-400 text-sm">Fire Protection</div>
             </div>
             <div>
               <Droplets className="w-6 h-6 text-blue-300 mx-auto mb-1" />
               <div className="text-xl font-bold text-white">150+ in/hr</div>
-              <div className="text-blue-200 text-sm">Water Capacity</div>
+              <div className="text-gray-400 text-sm">Water Capacity</div>
             </div>
             <div>
-              <Clock className="w-6 h-6 text-green-400 mx-auto mb-1" />
+              <Clock className="w-6 h-6 text-[#79b939] mx-auto mb-1" />
               <div className="text-xl font-bold text-white">1 Day</div>
-              <div className="text-blue-200 text-sm">Most Installs</div>
+              <div className="text-gray-400 text-sm">Most Installs</div>
             </div>
           </div>
         </div>
@@ -285,9 +285,9 @@ export default async function LocationPage({
                 <Link
                   key={neighborhood.slug}
                   href={`/services/${neighborhood.slug}`}
-                  className="group bg-gray-50 hover:bg-blue-50 p-4 rounded-xl transition-colors"
+                  className="group bg-gray-50 hover:bg-[#79b939]/10 p-4 rounded-xl transition-colors"
                 >
-                  <div className="font-semibold text-gray-900 group-hover:text-blue-600 flex items-center justify-between">
+                  <div className="font-semibold text-gray-900 group-hover:text-[#79b939] flex items-center justify-between">
                     {neighborhood.name}
                     <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -302,7 +302,7 @@ export default async function LocationPage({
       )}
 
       {/* CTA */}
-      <section className="py-12 bg-amber-500">
+      <section className="py-12 bg-[#79b939]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Get a Free Estimate in {location.name}
@@ -310,13 +310,13 @@ export default async function LocationPage({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/#contact"
-              className="bg-white hover:bg-gray-100 text-amber-600 px-8 py-4 rounded-full text-lg font-bold transition-all"
+              className="bg-white hover:bg-gray-100 text-[#79b939] px-8 py-4 rounded-full text-lg font-bold transition-all"
             >
               Request Estimate
             </Link>
             <a
               href="tel:+19289107578"
-              className="bg-amber-600 hover:bg-amber-700 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold transition-all inline-flex items-center justify-center gap-2"
+              className="bg-[#5a9a1f] hover:bg-[#4a8a10] border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold transition-all inline-flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" /> (928) 910-7578
             </a>
@@ -337,7 +337,7 @@ export default async function LocationPage({
                 <Link
                   key={loc.slug}
                   href={`/services/${loc.slug}`}
-                  className="bg-gray-100 hover:bg-blue-100 hover:text-blue-700 px-3 py-1.5 rounded-full text-sm text-gray-700 transition-colors"
+                  className="bg-gray-100 hover:bg-[#79b939]/20 hover:text-[#79b939] px-3 py-1.5 rounded-lg text-sm text-gray-700 transition-colors"
                 >
                   {loc.name}
                 </Link>
