@@ -175,13 +175,22 @@ function ProblemSection() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Tired of These Gutter Nightmares?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Don&apos;t wait until it&apos;s too late. Clogged gutters cause thousands in damage every year.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Tired of These Gutter Nightmares?
+            </h2>
+            <p className="text-xl text-gray-600">
+              Don&apos;t wait until it&apos;s too late. Clogged gutters cause thousands in damage every year.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src="/clogged gutter.png"
+              alt="Clogged gutter full of debris"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
