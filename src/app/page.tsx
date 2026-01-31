@@ -157,8 +157,8 @@ function ProblemSection() {
   const problems = [
     {
       icon: <Clock className="w-12 h-12" />,
-      title: "Wasted Weekends",
-      description: "Nobody wants to spend their Saturday on a ladder scooping wet leaves out of gutters. You've got better things to do.",
+      title: "The $300/Year Chore",
+      description: "Professional gutter cleaning costs $150-300 per visit, twice a year. That's $3,000+ over 10 years—or you can spend your weekends on a ladder instead.",
     },
     {
       icon: <DollarSign className="w-12 h-12" />,
